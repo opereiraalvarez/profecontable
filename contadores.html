@@ -1,19 +1,71 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta charset="UTF-8">
     <title>Contadores | Profe Contable El Peñol</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>...</header>
-    <section class="contadores-page">
-        <div class="container">
-            <h1>Contadores públicos</h1>
-            <div class="contadores-grid">
-                <div class="contador-card"><i class="fas fa-chalkboard-user"></i><h3>Óscar Pereira</h3><p>Egresado de la Universidad de Manizales. Docente y contador.</p></div>
-                <div class="contador-card"><i class="fas fa-calculator"></i><h3>Yuliana Doria</h3><p>Egresada de la Universidad Adventista de Medellín. Especialista en declaraciones de renta.</p></div>
+
+<header class="header">
+    <div class="container nav-container">
+        <div class="logo">
+            <img src="logo-grande.png" alt="Profe Contable El Peñol" class="logo-img">
+            <span>Profe Contable <strong>El Peñol</strong></span>
+        </div>
+        <button class="menu-toggle" id="menuToggle">☰</button>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#servicios">Servicios</a></li>
+            <li><a href="contadores.html">Contadores</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </div>
+</header>
+
+<section class="contadores-page">
+    <div class="container">
+        <h1>Nuestro equipo de contadores públicos</h1>
+        <div class="contadores-grid">
+            <div class="contador-card">
+                <i class="fas fa-chalkboard-user"></i>
+                <h3>Óscar Pereira</h3>
+                <p>Egresado de la <strong>Universidad de Manizales</strong>. Docente y contador con amplia experiencia en asesoría a pequeños negocios del sector turístico.</p>
+            </div>
+            <div class="contador-card">
+                <i class="fas fa-calculator"></i>
+                <h3>Yuliana Doria</h3>
+                <p>Egresada de la <strong>Universidad Adventista de Medellín</strong>. Especialista en declaraciones de renta, impuestos y organización financiera para emprendedores.</p>
             </div>
         </div>
-    </section>
-    <footer>...</footer>
+    </div>
+</section>
+
+<footer>
+    <div class="container footer-grid">
+        <div>
+            <h3>Profe Contable El Peñol</h3>
+            <p>Óscar Pereira – Universidad de Manizales</p>
+            <p>Yuliana Doria – Universidad Adventista</p>
+        </div>
+        <div>
+            <h3>Contacto</h3>
+            <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/573203217226">320 321 7226</a></p>
+            <p><i class="far fa-envelope"></i> profecontable@elpenol.com</p>
+        </div>
+        <div>
+            <h3>Horario</h3>
+            <p>Lun a Vie: 2pm–7pm<br>Sáb: 9am–1pm</p>
+        </div>
+    </div>
+    <div class="copyright">© 2026 Profe Contable El Peñol</div>
+</footer>
+
+<a href="https://wa.me/573203217226" class="btn-wsp-fixed" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+<script src="script.js"></script>
 </body>
 </html>
