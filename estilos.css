@@ -1,0 +1,418 @@
+/* RESET Y BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #1e2a3a;
+    line-height: 1.5;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* COLORES */
+:root {
+    --azul: #0b3b5f;
+    --verde: #1e7b4b;
+    --verde-claro: #2c9b60;
+    --gris-fondo: #f8fafc;
+    --gris-borde: #e2e8f0;
+    --texto-oscuro: #0f172a;
+    --texto-suave: #475569;
+}
+
+.verde {
+    color: var(--verde);
+}
+
+/* HEADER */
+.header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 1rem 0;
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.logo i {
+    color: var(--verde);
+    margin-right: 8px;
+}
+.logo span strong {
+    color: var(--azul);
+}
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+.nav-menu a {
+    text-decoration: none;
+    color: var(--texto-oscuro);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+.nav-menu a:hover {
+    color: var(--verde);
+}
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--azul);
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(135deg, #eef2f3 0%, #dce9f0 100%);
+    position: relative;
+    padding: 5rem 0 8rem 0;
+    text-align: center;
+}
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--azul);
+}
+.hero-tagline {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    color: var(--texto-suave);
+}
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.btn-primario {
+    background-color: #25D366;
+    color: white;
+    box-shadow: 0 4px 10px rgba(37,211,102,0.3);
+}
+.btn-primario:hover {
+    background-color: #1da152;
+    transform: translateY(-3px);
+}
+.btn-secundario {
+    background-color: transparent;
+    border: 2px solid var(--azul);
+    color: var(--azul);
+}
+.btn-secundario:hover {
+    background-color: var(--azul);
+    color: white;
+}
+.hero-badge {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: var(--texto-suave);
+}
+.hero-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+.hero-wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 60px;
+}
+.shape-fill {
+    fill: #ffffff;
+}
+
+/* SECCIÓN SERVICIOS */
+.servicios {
+    padding: 5rem 0;
+    background-color: white;
+}
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--azul);
+}
+.section-subtitle {
+    text-align: center;
+    color: var(--texto-suave);
+    margin-bottom: 3rem;
+}
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+.servicio-card {
+    background: white;
+    border-radius: 20px;
+    padding: 1.8rem;
+    box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+    border: 1px solid var(--gris-borde);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.servicio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 30px -12px rgba(0,0,0,0.1);
+}
+.servicio-icon {
+    font-size: 2.5rem;
+    color: var(--verde);
+    margin-bottom: 1rem;
+}
+.servicio-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.precio {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--azul);
+    margin: 0.8rem 0;
+}
+.precio span {
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: var(--texto-suave);
+}
+.servicio-desc {
+    color: var(--texto-suave);
+    margin-bottom: 1.2rem;
+}
+.servicio-lista {
+    list-style: none;
+    margin: 1.2rem 0;
+}
+.servicio-lista li {
+    margin-bottom: 0.6rem;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.servicio-lista i {
+    color: var(--verde);
+    font-size: 0.9rem;
+}
+.btn-card {
+    display: inline-block;
+    background-color: var(--azul);
+    color: white;
+    padding: 0.7rem 1.2rem;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+.btn-card i {
+    margin-left: 6px;
+}
+.btn-card:hover {
+    background-color: var(--verde);
+}
+
+/* SOBRE MÍ */
+.sobre-mi {
+    background-color: var(--gris-fondo);
+    padding: 5rem 0;
+}
+.sobre-mi-grid {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.sobre-mi-texto {
+    flex: 1;
+}
+.sobre-mi-texto h2 {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+}
+.sobre-mi-texto p {
+    margin-bottom: 1rem;
+    color: var(--texto-suave);
+}
+.firma {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 1.5rem 0;
+    color: var(--azul);
+}
+.sobre-mi-imagen {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.imagen-placeholder {
+    width: 280px;
+    height: 280px;
+    background-color: #eef2f5;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    color: var(--azul);
+    border: 3px solid var(--verde);
+}
+.imagen-placeholder p {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color: var(--texto-suave);
+}
+
+/* VENTAJAS */
+.ventajas {
+    padding: 4rem 0;
+    background-color: white;
+}
+.ventajas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+.ventaja i {
+    font-size: 2.5rem;
+    color: var(--verde);
+    margin-bottom: 0.8rem;
+}
+.ventaja h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--azul);
+    color: white;
+    padding: 3rem 0 1rem 0;
+}
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+.footer-col h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+.footer-col p, .footer-col a {
+    color: #cbd5e1;
+    text-decoration: none;
+}
+.footer-col a:hover {
+    color: white;
+}
+.sociales a {
+    display: inline-block;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    color: #cbd5e1;
+}
+.sociales a:hover {
+    color: white;
+}
+.copyright {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #2d4a6e;
+    font-size: 0.8rem;
+}
+
+/* BOTÓN FLOTANTE WHATSAPP */
+.btn-wsp-flotante {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366;
+    color: white;
+    width: auto;
+    padding: 12px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: all 0.3s;
+}
+.btn-wsp-flotante i {
+    font-size: 1.8rem;
+}
+.btn-wsp-flotante:hover {
+    background-color: #1da152;
+    transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    .nav-menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 1rem;
+        background: white;
+        padding: 1rem 0;
+        margin-top: 1rem;
+        border-top: 1px solid var(--gris-borde);
+    }
+    .nav-menu.active {
+        display: flex;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .servicios-grid {
+        grid-template-columns: 1fr;
+    }
+    .sobre-mi-grid {
+        flex-direction: column;
+    }
+    .btn-wsp-flotante span {
+        display: inline;
+    }
+}
