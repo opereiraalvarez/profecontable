@@ -2,33 +2,72 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asesoría mensual | Profe Contable El Peñol</title>
     <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <!-- fuentes, etc... (igual que index) -->
 </head>
 <body>
-    <header class="header"><!-- mismo header que index --></header>
 
-    <main class="pagina-servicio">
-        <div class="container">
-            <img src="ASESORIA CONTABLE.png" alt="Asesoría mensual" class="poster-grande">
-            <div class="descripcion-servicio">
-                <h1>Asesoría mensual para pequeños negocios</h1>
-                <p>Nos encargamos de tu contabilidad, tú enfócate en hacer crecer tu negocio.</p>
-                <ul>
-                    <li>✅ Clasificación de ingresos y gastos (mensual)</li>
-                    <li>✅ Preparación de declaraciones de ICA y retención</li>
-                    <li>✅ Reporte de rentabilidad</li>
-                    <li>✅ 2 consultas rápidas por WhatsApp</li>
-                </ul>
-                <a href="https://wa.me/573203217226" class="btn-primary">Solicitar información</a>
-            </div>
+<header class="header">
+    <div class="container nav-container">
+        <div class="logo">
+            <img src="logo-grande.png" alt="Profe Contable El Peñol" class="logo-img">
+            <span>Profe Contable <strong>El Peñol</strong></span>
         </div>
-    </main>
+        <button class="menu-toggle" id="menuToggle">☰</button>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#servicios">Servicios</a></li>
+            <li><a href="contadores.html">Contadores</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </div>
+</header>
 
-    <footer>... igual que index ...</footer>
-    <a href="https://wa.me/573203217226" class="btn-wsp-fixed">💬</a>
-    <script src="script.js"></script>
+<main class="pagina-servicio">
+    <div class="container">
+        <img src="asesoria-mensual.png" alt="Asesoría mensual" class="poster-grande">
+        <div class="descripcion-servicio">
+            <h1>Asesoría mensual para pequeños negocios</h1>
+            <p>Nos encargamos de tu contabilidad, tú enfócate en hacer crecer tu negocio.</p>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> Clasificación de ingresos y gastos (mensual)</li>
+                <li><i class="fas fa-check-circle"></i> Preparación de declaraciones de ICA y retención en la fuente</li>
+                <li><i class="fas fa-check-circle"></i> Reporte simple de rentabilidad (¿ganaste o perdiste?)</li>
+                <li><i class="fas fa-check-circle"></i> 2 consultas rápidas por WhatsApp sin costo extra</li>
+                <li><i class="fas fa-check-circle"></i> Acompañamiento y recordatorios para que no se te pase nada</li>
+            </ul>
+            <a href="https://wa.me/573203217226?text=Hola%2C%20quiero%20información%20de%20la%20asesoría%20mensual" class="btn btn-primary" target="_blank"><i class="fab fa-whatsapp"></i> Solicitar información</a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container footer-grid">
+        <div>
+            <h3>Profe Contable El Peñol</h3>
+            <p>Óscar Pereira – Universidad de Manizales</p>
+            <p>Yuliana Doria – Universidad Adventista de Medellín</p>
+        </div>
+        <div>
+            <h3>Contacto</h3>
+            <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/573203217226">320 321 7226</a></p>
+            <p><i class="far fa-envelope"></i> profecontable@elpenol.com</p>
+        </div>
+        <div>
+            <h3>Horario</h3>
+            <p>Lun a Vie: 2:00 p.m. – 7:00 p.m.</p>
+            <p>Sábados: 9:00 a.m. – 1:00 p.m.</p>
+        </div>
+    </div>
+    <div class="copyright">© 2026 Profe Contable El Peñol – Todos los derechos reservados</div>
+</footer>
+
+<a href="https://wa.me/573203217226" class="btn-wsp-fixed" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+<script src="script.js"></script>
 </body>
 </html>
