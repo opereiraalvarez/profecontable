@@ -1,313 +1,220 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profe Contable El Peñol - Asesoría Contable y Financiera</title>
-  <style>
-    /* Estilos generales */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      color: #333;
-    }
-
-    /* Paleta de colores profesional */
-    :root {
-      --azul-profundo: #1e3a5f;
-      --verde-esmeralda: #2c7a4d;
-      --gris-claro: #f8f9fa;
-      --blanco: #ffffff;
-      --sombra: 0 4px 6px rgba(0,0,0,0.1);
-    }
-
-    /* Contenedor principal */
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    /* Header y navegación */
-    header {
-      background-color: var(--azul-profundo);
-      color: var(--blanco);
-      padding: 1rem 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: var(--sombra);
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    .logo span {
-      color: var(--verde-esmeralda);
-    }
-
-    .nav-links {
-      display: flex;
-      list-style: none;
-    }
-
-    .nav-links li {
-      margin-left: 2rem;
-    }
-
-    .nav-links a {
-      color: var(--blanco);
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: var(--verde-esmeralda);
-    }
-
-    /* Botón principal */
-    .btn {
-      display: inline-block;
-      background-color: var(--verde-esmeralda);
-      color: var(--blanco);
-      padding: 0.8rem 1.5rem;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: transform 0.3s, background-color 0.3s;
-    }
-
-    .btn:hover {
-      background-color: #1e5c3a;
-      transform: translateY(-2px);
-    }
-
-    /* Sección Hero (Portada) */
-    .hero {
-      background: linear-gradient(135deg, var(--azul-profundo) 0%, var(--verde-esmeralda) 100%);
-      color: var(--blanco);
-      padding: 4rem 0;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* Sección de servicios */
-    .services {
-      padding: 4rem 0;
-      background-color: var(--gris-claro);
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 3rem;
-      font-size: 2rem;
-      color: var(--azul-profundo);
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    }
-
-    .service-card {
-      background-color: var(--blanco);
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: var(--sombra);
-      text-align: center;
-    }
-
-    .service-card h3 {
-      color: var(--verde-esmeralda);
-      margin-bottom: 0.5rem;
-    }
-
-    .price {
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: var(--azul-profundo);
-      margin: 1rem 0;
-    }
-
-    /* Sección Sobre Mí */
-    .about {
-      padding: 4rem 0;
-    }
-
-    .about-content {
-      display: flex;
-      gap: 2rem;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .about-text {
-      flex: 1;
-    }
-
-    /* Footer */
-    footer {
-      background-color: var(--azul-profundo);
-      color: var(--blanco);
-      text-align: center;
-      padding: 2rem 0;
-      margin-top: 2rem;
-    }
-
-    .whatsapp-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: white;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 30px;
-      box-shadow: var(--sombra);
-      transition: transform 0.3s;
-      z-index: 1000;
-    }
-
-    .whatsapp-btn:hover {
-      transform: scale(1.1);
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .nav-links {
-        margin-top: 1rem;
-      }
-      .nav-links li {
-        margin-left: 1rem;
-      }
-      .hero h1 {
-        font-size: 1.8rem;
-      }
-      .about-content {
-        flex-direction: column;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Profe Contable El Peñol | Asesoría contable para negocios</title>
+    <!-- Meta descripción para SEO -->
+    <meta name="description" content="Asesoría contable y financiera para restaurantes, hoteles y pequeños negocios en El Peñol y Guatapé. Precios claros, servicios profesionales. Contador y profesor.">
+    <link rel="stylesheet" href="estilos.css">
+    <!-- Fuentes profesionales -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <!-- Font Awesome para íconos (gratuito) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <nav>
-        <div class="logo">Profe Contable <span>El Peñol</span></div>
-        <ul class="nav-links">
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#sobre-mi">Sobre Mí</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
-  <main>
-    <!-- Sección Hero -->
+    <!-- Barra de navegación -->
+    <header class="header">
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <span>Profe Contable <strong>El Peñol</strong></span>
+            </div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Sección Hero (Portada) -->
     <section id="inicio" class="hero">
-      <div class="container">
-        <h1>Profe Contable El Peñol</h1>
-        <p>Asesoría contable y financiera para restaurantes, hoteles y pequeños negocios en El Peñol y Guatapé.</p>
-        <a href="https://wa.me/573000000000?text=Hola,%20quiero%20agendar%20una%20asesoría%20gratuita" class="btn">Agenda tu Asesoría Gratuita</a>
-      </div>
-    </section>
-
-    <!-- Sección de Servicios -->
-    <section id="servicios" class="services">
-      <div class="container">
-        <h2 class="section-title">Servicios Contables</h2>
-        <div class="services-grid">
-          <div class="service-card">
-            <h3>Asesoría Mensual</h3>
-            <div class="price">$220.000 / mes</div>
-            <p>Clasificación de ingresos/gastos, declaraciones ICA y reporte de rentabilidad.</p>
-          </div>
-          <div class="service-card">
-            <h3>Declaración de Renta</h3>
-            <div class="price">$380.000 (único pago)</div>
-            <p>Para personas naturales con negocio. Cálculo, ajustes y presentación ante la DIAN.</p>
-          </div>
-          <div class="service-card">
-            <h3>Ganancia Ocasional</h3>
-            <div class="price">$280.000</div>
-            <p>Venta de lotes o propiedades. Ajuste por inflación y cálculo de impuesto del 15%.</p>
-          </div>
-          <div class="service-card">
-            <h3>Curso "Contabilidad sin miedo"</h3>
-            <div class="price">$90.000</div>
-            <p>Curso de 4 horas para empresarios. Aprende flujo de caja e impuestos básicos.</p>
-          </div>
-          <div class="service-card">
-            <h3>Consulta Puntual</h3>
-            <div class="price">$70.000 / hora</div>
-            <p>Resuelve dudas contables específicas o revisa una declaración atrasada.</p>
-          </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Profe Contable <span class="verde">El Peñol</span></h1>
+                <p class="hero-tagline">Contador público y docente. Ayudo a dueños de restaurantes, hoteles y pequeños negocios a ordenar sus finanzas y crecer sin miedo.</p>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/573000000000?text=Hola%2C%20quiero%20agendar%20mi%20asesor%C3%ADa%20gratuita%20de%2015%20minutos" class="btn btn-primario" target="_blank"><i class="fab fa-whatsapp"></i> Asesoría gratis 15 min</a>
+                    <a href="#servicios" class="btn btn-secundario">Ver servicios <i class="fas fa-arrow-down"></i></a>
+                </div>
+                <div class="hero-badge">
+                    <i class="fas fa-map-marker-alt"></i> El Peñol - Antioquia | Zona turística
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Sección Sobre Mí -->
-    <section id="sobre-mi" class="about">
-      <div class="container">
-        <h2 class="section-title">Sobre Mí</h2>
-        <div class="about-content">
-          <div class="about-text">
-            <h3>Profesor y Contador Público</h3>
-            <p>Soy docente de la vereda Palmira y contador con experiencia. Ayudo a los dueños de negocio de El Peñol a entender sus números, pagar menos impuestos y crecer con tranquilidad.</p>
-            <br>
-            <p><strong>¡Escríbeme y agenda una asesoría gratuita de 15 minutos sin compromiso!</strong></p>
-            <a href="https://wa.me/573000000000?text=Hola,%20quiero%20agendar%20una%20asesoría%20gratuita" class="btn">Contactar ahora</a>
-          </div>
-          <div class="about-image">
-            <!-- Aquí puedes poner una foto tuya -->
-          </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
         </div>
-      </div>
     </section>
-  </main>
 
-  <footer id="contacto">
-    <div class="container">
-      <p>&copy; 2026 Profe Contable El Peñol. Todos los derechos reservados.</p>
-      <p>El Peñol, Antioquia | profecontableelpenol@gmail.com</p>
-    </div>
-  </footer>
+    <!-- Sección Servicios -->
+    <section id="servicios" class="servicios">
+        <div class="container">
+            <h2 class="section-title">Servicios contables <span class="verde">con precios claros</span></h2>
+            <p class="section-subtitle">Planes mensuales y asesorías puntuales. Sin letras pequeñas.</p>
 
-  <!-- Botón flotante de WhatsApp -->
-  <a href="https://wa.me/573000000000?text=Hola,%20quiero%20agendar%20una%20asesoría%20gratuita" class="whatsapp-btn" target="_blank">💬</a>
+            <div class="servicios-grid">
+                <!-- Tarjeta 1: Asesoría mensual -->
+                <div class="servicio-card">
+                    <div class="servicio-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Asesoría mensual</h3>
+                    <div class="precio">$220.000 <span>/ mes</span></div>
+                    <p class="servicio-desc">Ideal para restaurantes, hoteles y tiendas que necesitan control mensual.</p>
+                    <ul class="servicio-lista">
+                        <li><i class="fas fa-check-circle"></i> Clasificación de ingresos y gastos</li>
+                        <li><i class="fas fa-check-circle"></i> Declaración de ICA y retención</li>
+                        <li><i class="fas fa-check-circle"></i> Reporte simple de rentabilidad</li>
+                        <li><i class="fas fa-check-circle"></i> 2 consultas por WhatsApp incluidas</li>
+                    </ul>
+                    <a href="https://wa.me/573000000000?text=Hola%2C%20quiero%20información%20de%20la%20asesoría%20mensual" class="btn-card">Contratar <i class="fab fa-whatsapp"></i></a>
+                </div>
+
+                <!-- Tarjeta 2: Declaración de renta -->
+                <div class="servicio-card">
+                    <div class="servicio-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                    <h3>Declaración de renta</h3>
+                    <div class="precio">$380.000 <span>(único pago)</span></div>
+                    <p class="servicio-desc">Para personas naturales con negocio. Preparamos y presentamos tu declaración.</p>
+                    <ul class="servicio-lista">
+                        <li><i class="fas fa-check-circle"></i> Cálculo de impuesto a pagar</li>
+                        <li><i class="fas fa-check-circle"></i> Ajuste de costos y deducciones</li>
+                        <li><i class="fas fa-check-circle"></i> Presentación ante la DIAN</li>
+                        <li><i class="fas fa-check-circle"></i> Asesoría para planear el próximo año</li>
+                    </ul>
+                    <a href="https://wa.me/573000000000?text=Hola%2C%20quiero%20declaración%20de%20renta" class="btn-card">Contratar <i class="fab fa-whatsapp"></i></a>
+                </div>
+
+                <!-- Tarjeta 3: Ganancia ocasional (venta de lotes) -->
+                <div class="servicio-card">
+                    <div class="servicio-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                    <h3>Ganancia ocasional</h3>
+                    <div class="precio">$280.000 <span>(único pago)</span></div>
+                    <p class="servicio-desc">Venta de lotes, propiedades o vehículos. Te ayudamos a pagar menos impuestos legalmente.</p>
+                    <ul class="servicio-lista">
+                        <li><i class="fas fa-check-circle"></i> Cálculo del 15% sobre la utilidad real</li>
+                        <li><i class="fas fa-check-circle"></i> Ajuste del costo de compra por inflación</li>
+                        <li><i class="fas fa-check-circle"></i> Diligenciamiento y presentación</li>
+                        <li><i class="fas fa-check-circle"></i> Ahorro promedio: 3-5 millones</li>
+                    </ul>
+                    <a href="https://wa.me/573000000000?text=Hola%2C%20quiero%20asesoría%20por%20venta%20de%20lote" class="btn-card">Contratar <i class="fab fa-whatsapp"></i></a>
+                </div>
+
+                <!-- Tarjeta 4: Curso "Contabilidad sin miedo" -->
+                <div class="servicio-card">
+                    <div class="servicio-icon"><i class="fas fa-chalkboard-user"></i></div>
+                    <h3>Curso "Contabilidad sin miedo"</h3>
+                    <div class="precio">$90.000 <span>por persona</span></div>
+                    <p class="servicio-desc">4 horas en vivo (Zoom o presencial en El Peñol). Aprende lo esencial.</p>
+                    <ul class="servicio-lista">
+                        <li><i class="fas fa-check-circle"></i> Flujo de caja con plantilla Excel</li>
+                        <li><i class="fas fa-check-circle"></i> Impuestos básicos: ICA, retefuente</li>
+                        <li><i class="fas fa-check-circle"></i> Facturación electrónica para pequeños negocios</li>
+                        <li><i class="fas fa-check-circle"></i> Certificado de participación</li>
+                    </ul>
+                    <a href="https://wa.me/573000000000?text=Hola%2C%20quiero%20el%20curso%20Contabilidad%20sin%20miedo" class="btn-card">Reservar cupo <i class="fab fa-whatsapp"></i></a>
+                </div>
+
+                <!-- Tarjeta 5: Consulta puntual por hora -->
+                <div class="servicio-card">
+                    <div class="servicio-icon"><i class="fas fa-clock"></i></div>
+                    <h3>Consulta puntual</h3>
+                    <div class="precio">$70.000 <span>/ hora</span></div>
+                    <p class="servicio-desc">Resuelve una duda específica sin contratar un plan mensual.</p>
+                    <ul class="servicio-lista">
+                        <li><i class="fas fa-check-circle"></i> Revisión de una declaración atrasada</li>
+                        <li><i class="fas fa-check-circle"></i> Cálculo de impuesto puntual</li>
+                        <li><i class="fas fa-check-circle"></i> Asesoría por videollamada o WhatsApp</li>
+                        <li><i class="fas fa-check-circle"></i> Sin permanencia</li>
+                    </ul>
+                    <a href="https://wa.me/573000000000?text=Hola%2C%20quiero%20una%20consulta%20de%20una%20hora" class="btn-card">Agendar <i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Sobre mí -->
+    <section id="sobre-mi" class="sobre-mi">
+        <div class="container">
+            <div class="sobre-mi-grid">
+                <div class="sobre-mi-texto">
+                    <h2>Profesor de matemáticas <span class="verde">y Contador Público</span></h2>
+                    <p>Mi nombre es <strong>[Tu Nombre]</strong> y soy docente en la vereda Palmira, El Peñol. Entiendo que los números asustan a muchos dueños de negocio, pero mi misión es hacerte la contabilidad tan fácil como una clase de matemáticas bien explicada.</p>
+                    <p>Llevo años ayudando a pequeños empresarios a ordenar sus finanzas, pagar solo los impuestos justos y tomar mejores decisiones. Además, conozco la realidad del turismo en El Peñol y Guatapé: hoteles, restaurantes, alquiler de cabañas. Por eso ofrezco soluciones prácticas, no teorías complicadas.</p>
+                    <div class="firma">
+                        <i class="fas fa-calculator"></i> ¡Escríbeme y sal de dudas!
+                    </div>
+                    <a href="https://wa.me/573000000000?text=Hola%2C%20quiero%20agendar%20mi%20asesoría%20gratuita" class="btn btn-primario">Agenda tu asesoría gratis</a>
+                </div>
+                <div class="sobre-mi-imagen">
+                    <!-- Aquí puedes poner tu foto. Si no tienes, se puede usar un ícono grande -->
+                    <div class="imagen-placeholder">
+                        <i class="fas fa-user-graduate"></i>
+                        <p>Foto del profe</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Por qué elegirnos -->
+    <section class="ventajas">
+        <div class="container">
+            <h2 class="section-title">¿Por qué confiar en <span class="verde">Profe Contable?</span></h2>
+            <div class="ventajas-grid">
+                <div class="ventaja"><i class="fas fa-map-marker-alt"></i><h3>Local</h3><p>Vivo y trabajo en El Peñol. Conozco las necesidades de los negocios turísticos.</p></div>
+                <div class="ventaja"><i class="fas fa-chalkboard"></i><h3>Pedagogía</h3><p>Soy profesor, sé explicar de forma clara sin enredos contables.</p></div>
+                <div class="ventaja"><i class="fas fa-shield-alt"></i><h3>Confianza</h3><p>Contador público titulado. Tus datos e información estarán seguros.</p></div>
+                <div class="ventaja"><i class="fab fa-whatsapp"></i><h3>Respuesta rápida</h3><p>WhatsApp directo con el profe. Sin call centers ni demoras.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Profe Contable El Peñol</h3>
+                    <p>Asesoría contable para pequeños negocios en El Peñol, Guatapé y Oriente Antioqueño.</p>
+                    <div class="sociales">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Contacto rápido</h3>
+                    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/573000000000">+57 300 000 0000</a></p>
+                    <p><i class="far fa-envelope"></i> profecontable@elpenol.com</p>
+                    <p><i class="fas fa-map-pin"></i> Vereda Palmira, El Peñol, Antioquia</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Horario de atención</h3>
+                    <p>Lun a Vie: 2:00 p.m. – 7:00 p.m.</p>
+                    <p>Sábados: 9:00 a.m. – 1:00 p.m.</p>
+                    <p>Domingos: cerrado (consultas por WhatsApp)</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Profe Contable El Peñol. Todos los derechos reservados. | Diseño profesional para emprendedores locales</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/573000000000?text=Hola%2C%20quiero%20agendar%20mi%20asesor%C3%ADa%20gratuita%20de%2015%20minutos" class="btn-wsp-flotante" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span>¿Dudas? Escríbeme</span>
+    </a>
+
+    <script src="script.js"></script>
 </body>
 </html>
