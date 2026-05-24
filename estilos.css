@@ -50,12 +50,15 @@ body {
     flex-wrap: wrap;
 }
 .logo {
-    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.4rem;
     font-weight: 600;
 }
-.logo i {
-    color: var(--verde);
-    margin-right: 8px;
+.logo-img {
+    height: 50px;
+    width: auto;
 }
 .logo span strong {
     color: var(--azul);
@@ -87,26 +90,18 @@ body {
 .hero {
     background: linear-gradient(135deg, #eef2f3 0%, #dce9f0 100%);
     position: relative;
-    padding: 5rem 0 8rem 0;
+    padding: 3rem 0 6rem 0;
     text-align: center;
 }
-.hero-content h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: var(--azul);
-}
-.hero-tagline {
-    font-size: 1.2rem;
-    max-width: 700px;
-    margin: 0 auto 2rem auto;
-    color: var(--texto-suave);
+.hero-imagen {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
 }
 .hero-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
+    margin-top: 1rem;
 }
 .btn {
     display: inline-block;
@@ -124,20 +119,6 @@ body {
 .btn-primario:hover {
     background-color: #1da152;
     transform: translateY(-3px);
-}
-.btn-secundario {
-    background-color: transparent;
-    border: 2px solid var(--azul);
-    color: var(--azul);
-}
-.btn-secundario:hover {
-    background-color: var(--azul);
-    color: white;
-}
-.hero-badge {
-    margin-top: 2rem;
-    font-size: 0.9rem;
-    color: var(--texto-suave);
 }
 .hero-wave {
     position: absolute;
@@ -157,7 +138,7 @@ body {
     fill: #ffffff;
 }
 
-/* SECCIÓN SERVICIOS */
+/* SERVICIOS */
 .servicios {
     padding: 5rem 0;
     background-color: white;
@@ -175,148 +156,75 @@ body {
 }
 .servicios-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 .servicio-card {
     background: white;
     border-radius: 20px;
-    padding: 1.8rem;
+    padding: 1rem;
     box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
     border: 1px solid var(--gris-borde);
     transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
 }
 .servicio-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 30px -12px rgba(0,0,0,0.1);
 }
-.servicio-icon {
-    font-size: 2.5rem;
-    color: var(--verde);
+.poster-servicio {
+    width: 100%;
+    border-radius: 16px;
     margin-bottom: 1rem;
-}
-.servicio-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-.precio {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--azul);
-    margin: 0.8rem 0;
-}
-.precio span {
-    font-size: 0.9rem;
-    font-weight: normal;
-    color: var(--texto-suave);
-}
-.servicio-desc {
-    color: var(--texto-suave);
-    margin-bottom: 1.2rem;
-}
-.servicio-lista {
-    list-style: none;
-    margin: 1.2rem 0;
-}
-.servicio-lista li {
-    margin-bottom: 0.6rem;
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-.servicio-lista i {
-    color: var(--verde);
-    font-size: 0.9rem;
 }
 .btn-card {
     display: inline-block;
-    background-color: var(--azul);
+    background-color: var(--verde);
     color: white;
-    padding: 0.7rem 1.2rem;
+    padding: 0.7rem 1.5rem;
     border-radius: 40px;
     text-decoration: none;
     font-weight: 600;
     transition: background 0.3s;
+    margin-top: 0.5rem;
 }
 .btn-card i {
     margin-left: 6px;
 }
 .btn-card:hover {
-    background-color: var(--verde);
+    background-color: #155f3a;
 }
 
-/* SOBRE MÍ */
-.sobre-mi {
+/* CONTADORES */
+.contadores {
     background-color: var(--gris-fondo);
-    padding: 5rem 0;
+    padding: 4rem 0;
 }
-.sobre-mi-grid {
+.contadores-grid {
     display: flex;
-    gap: 3rem;
-    align-items: center;
+    justify-content: center;
+    gap: 2rem;
     flex-wrap: wrap;
 }
-.sobre-mi-texto {
-    flex: 1;
-}
-.sobre-mi-texto h2 {
-    font-size: 2rem;
-    margin-bottom: 1.2rem;
-}
-.sobre-mi-texto p {
-    margin-bottom: 1rem;
-    color: var(--texto-suave);
-}
-.firma {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin: 1.5rem 0;
-    color: var(--azul);
-}
-.sobre-mi-imagen {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-.imagen-placeholder {
-    width: 280px;
-    height: 280px;
-    background-color: #eef2f5;
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 5rem;
-    color: var(--azul);
-    border: 3px solid var(--verde);
-}
-.imagen-placeholder p {
-    font-size: 0.9rem;
-    margin-top: 10px;
-    color: var(--texto-suave);
-}
-
-/* VENTAJAS */
-.ventajas {
-    padding: 4rem 0;
-    background-color: white;
-}
-.ventajas-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
+.contador-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
     text-align: center;
-    margin-top: 2rem;
+    max-width: 300px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
-.ventaja i {
-    font-size: 2.5rem;
+.contador-card i {
+    font-size: 3rem;
     color: var(--verde);
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
 }
-.ventaja h3 {
-    margin-bottom: 0.5rem;
+.contador-card h3 {
+    margin-bottom: 0.8rem;
+    color: var(--azul);
+}
+.contador-card p {
+    color: var(--texto-suave);
 }
 
 /* FOOTER */
@@ -403,16 +311,19 @@ footer {
     .nav-menu.active {
         display: flex;
     }
-    .hero-content h1 {
-        font-size: 2rem;
+    .hero-imagen {
+        width: 100%;
     }
     .servicios-grid {
         grid-template-columns: 1fr;
     }
-    .sobre-mi-grid {
-        flex-direction: column;
-    }
     .btn-wsp-flotante span {
         display: inline;
+    }
+    .logo span {
+        font-size: 1rem;
+    }
+    .logo-img {
+        height: 40px;
     }
 }
