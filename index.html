@@ -2,107 +2,65 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Profe Contable El Peñol | Asesoría contable para restaurantes, hoteles y pequeños negocios</title>
-    <meta name="description" content="Asesoría contable y financiera para restaurantes, hoteles y pequeños negocios en El Peñol y Guatapé. Contadores públicos con experiencia docente.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profe Contable El Peñol | Inicio</title>
+    <meta name="description" content="Asesoría contable para restaurantes, hoteles y pequeños negocios en El Peñol. Contadores públicos con experiencia docente.">
     <link rel="stylesheet" href="estilos.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Favicon con tu logo -->
-    <link rel="icon" type="image/png" href="LOGO GRANDE.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
 
-    <!-- Header con el logo -->
+    <!-- Header con logo y navegación -->
     <header class="header">
         <div class="container nav-container">
             <div class="logo">
-                <img src="LOGO GRANDE.png" alt="Logo Profe Contable El Peñol" class="logo-img">
+                <img src="LOGO GRANDE.png" alt="Profe Contable El Peñol" class="logo-img">
                 <span>Profe Contable <strong>El Peñol</strong></span>
             </div>
-            <button class="menu-toggle" id="menuToggle" aria-label="Menú">
-                <i class="fas fa-bars"></i>
-            </button>
+            <button class="menu-toggle" id="menuToggle">☰</button>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#contadores">Contadores</a></li>
+                <li><a href="contadores.html">Contadores</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </div>
     </header>
 
-    <!-- Sección Hero (Bienvenida) -->
-    <section id="inicio" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <img src="BIENVENIDO.png" alt="Bienvenido a Profe Contable El Peñol" class="hero-imagen">
-                <div class="hero-buttons">
-                    <a href="https://wa.me/573203217226?text=Hola%2C%20quiero%20agendar%20mi%20asesor%C3%ADa%20gratuita%20de%2015%20minutos" class="btn btn-primario" target="_blank"><i class="fab fa-whatsapp"></i> Asesoría gratis 15 min</a>
-                </div>
-            </div>
-        </div>
-        <div class="hero-wave">
-            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
-            </svg>
+    <!-- Hero con imagen de bienvenida -->
+    <section class="hero">
+        <div class="container hero-content">
+            <img src="BIENVENIDO.png" alt="Bienvenida" class="hero-img">
+            <a href="https://wa.me/573203217226?text=Hola%2C%20quiero%20mi%20asesoría%20gratuita" class="btn btn-primary">📲 Asesoría gratis 15 min</a>
         </div>
     </section>
 
-    <!-- Sección Servicios (cada servicio es un póster) -->
-    <section id="servicios" class="servicios">
+    <!-- Servicios destacados (tarjetas que llevan a páginas internas) -->
+    <section id="servicios" class="servicios-destacados">
         <div class="container">
-            <h2 class="section-title">Nuestros <span class="verde">Servicios Contables</span></h2>
-            <p class="section-subtitle">Soluciones claras, sin letras pequeñas. Elige el servicio que necesitas.</p>
-
-            <div class="servicios-grid">
-                <!-- Asesoría mensual -->
-                <div class="servicio-card">
-                    <img src="ASESORIA CONTABLE.png" alt="Asesoría mensual para pequeños negocios" class="poster-servicio">
-                    <a href="https://wa.me/573203217226?text=Hola%2C%20quiero%20información%20de%20la%20asesoría%20mensual" class="btn-card">Consultar <i class="fab fa-whatsapp"></i></a>
+            <h2>Nuestros servicios</h2>
+            <div class="grid-tarjetas">
+                <div class="tarjeta-servicio">
+                    <img src="ASESORIA CONTABLE.png" alt="Asesoría mensual">
+                    <a href="asesoria-mensual.html" class="btn-secundario">Ver más →</a>
                 </div>
-
-                <!-- Declaración de renta -->
-                <div class="servicio-card">
-                    <img src="DECLARACION DE RENTA.png" alt="Declaración de renta para personas naturales con negocio" class="poster-servicio">
-                    <a href="https://wa.me/573203217226?text=Hola%2C%20quiero%20información%20sobre%20declaración%20de%20renta" class="btn-card">Consultar <i class="fab fa-whatsapp"></i></a>
+                <div class="tarjeta-servicio">
+                    <img src="DECLARACION DE RENTA.png" alt="Declaración de renta">
+                    <a href="declaracion-renta.html" class="btn-secundario">Ver más →</a>
                 </div>
-
-                <!-- Ganancia ocasional -->
-                <div class="servicio-card">
-                    <img src="GANANCIA OCASIONAL.png" alt="Declaración de ganancia ocasional por venta de lotes o activos" class="poster-servicio">
-                    <a href="https://wa.me/573203217226?text=Hola%2C%20quiero%20asesoría%20para%20ganancia%20ocasional" class="btn-card">Consultar <i class="fab fa-whatsapp"></i></a>
+                <div class="tarjeta-servicio">
+                    <img src="GANANCIA OCASIONAL.png" alt="Ganancia ocasional">
+                    <a href="ganancia-ocasional.html" class="btn-secundario">Ver más →</a>
                 </div>
-
-                <!-- Curso contable -->
-                <div class="servicio-card">
-                    <img src="CURSO CONTABLE.png" alt="Curso Contabilidad para empresarios sin miedo" class="poster-servicio">
-                    <a href="https://wa.me/573203217226?text=Hola%2C%20quiero%20información%20del%20curso%20contable" class="btn-card">Reservar cupo <i class="fab fa-whatsapp"></i></a>
+                <div class="tarjeta-servicio">
+                    <img src="CURSO CONTABLE.png" alt="Curso">
+                    <a href="curso-contable.html" class="btn-secundario">Ver más →</a>
                 </div>
-
-                <!-- Asesoría puntual por hora -->
-                <div class="servicio-card">
-                    <img src="preguntas.png" alt="Asesoría puntual por hora para dudas concretas" class="poster-servicio">
-                    <a href="https://wa.me/573203217226?text=Hola%2C%20quiero%20agendar%20una%20consulta%20por%20hora" class="btn-card">Agendar <i class="fab fa-whatsapp"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección Contadores -->
-    <section id="contadores" class="contadores">
-        <div class="container">
-            <h2 class="section-title">Contadores <span class="verde">Públicos</span></h2>
-            <div class="contadores-grid">
-                <div class="contador-card">
-                    <i class="fas fa-chalkboard-user"></i>
-                    <h3>Óscar Pereira</h3>
-                    <p>Egresado de la <strong>Universidad de Manizales</strong>. Docente y contador con amplia experiencia en asesoría a pequeños negocios.</p>
-                </div>
-                <div class="contador-card">
-                    <i class="fas fa-calculator"></i>
-                    <h3>Yuliana Doria</h3>
-                    <p>Egresada de la <strong>Universidad Adventista de Medellín</strong>. Especialista en declaraciones de renta, impuestos y organización financiera.</p>
+                <div class="tarjeta-servicio">
+                    <img src="preguntas.png" alt="Asesoría puntual">
+                    <a href="asesoria-puntual.html" class="btn-secundario">Ver más →</a>
                 </div>
             </div>
         </div>
@@ -110,40 +68,25 @@
 
     <!-- Footer -->
     <footer id="contacto">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <h3>Profe Contable El Peñol</h3>
-                    <p>Asesoría contable para restaurantes, hoteles y pequeños negocios en El Peñol, Guatapé y Oriente Antioqueño.</p>
-                    <div class="sociales">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-                <div class="footer-col">
-                    <h3>Contacto</h3>
-                    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/573203217226">320 321 7226</a></p>
-                    <p><i class="far fa-envelope"></i> profecontablepenol@gmail.com</p>
-                    <p><i class="fas fa-map-pin"></i> El Peñol, Antioquia</p>
-                </div>
-                <div class="footer-col">
-                    <h3>Horario de atención</h3>
-                    <p>Lun a Vie: 2:00 p.m. – 7:00 p.m.</p>
-                    <p>Domingos: consultas por WhatsApp</p>
-                </div>
+        <div class="container footer-grid">
+            <div>
+                <h3>Profe Contable El Peñol</h3>
+                <p>Óscar Pereira – Universidad de Manizales<br>Yuliana Doria – Universidad Adventista</p>
             </div>
-            <div class="copyright">
-                <p>&copy; 2026 Profe Contable El Peñol - Óscar Pereira & Yuliana Doria | Contadores Públicos</p>
+            <div>
+                <h3>Contacto</h3>
+                <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/573203217226">320 321 7226</a><br>
+                <i class="far fa-envelope"></i> profecontable@elpenol.com</p>
+            </div>
+            <div>
+                <h3>Horario</h3>
+                <p>Lun-Vie 2pm–7pm<br>Sáb 9am–1pm</p>
             </div>
         </div>
+        <div class="copyright">© 2026 – Profe Contable El Peñol</div>
     </footer>
 
-    <!-- Botón flotante de WhatsApp -->
-    <a href="https://wa.me/573203217226?text=Hola%2C%20quiero%20agendar%20mi%20asesor%C3%ADa%20gratuita" class="btn-wsp-flotante" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-        <span>¿Dudas? Escríbeme</span>
-    </a>
+    <a href="https://wa.me/573203217226" class="btn-wsp-fixed" target="_blank"><i class="fab fa-whatsapp"></i> ¿Dudas?</a>
 
     <script src="script.js"></script>
 </body>
