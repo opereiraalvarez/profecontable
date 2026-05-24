@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profe Contable El Peñol - Asesoría Contable y Financiera</title>
+  <style>
+    /* Estilos generales */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* Paleta de colores profesional */
+    :root {
+      --azul-profundo: #1e3a5f;
+      --verde-esmeralda: #2c7a4d;
+      --gris-claro: #f8f9fa;
+      --blanco: #ffffff;
+      --sombra: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    /* Contenedor principal */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header y navegación */
+    header {
+      background-color: var(--azul-profundo);
+      color: var(--blanco);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--sombra);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: var(--verde-esmeralda);
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
+
+    .nav-links li {
+      margin-left: 2rem;
+    }
+
+    .nav-links a {
+      color: var(--blanco);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--verde-esmeralda);
+    }
+
+    /* Botón principal */
+    .btn {
+      display: inline-block;
+      background-color: var(--verde-esmeralda);
+      color: var(--blanco);
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #1e5c3a;
+      transform: translateY(-2px);
+    }
+
+    /* Sección Hero (Portada) */
+    .hero {
+      background: linear-gradient(135deg, var(--azul-profundo) 0%, var(--verde-esmeralda) 100%);
+      color: var(--blanco);
+      padding: 4rem 0;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Sección de servicios */
+    .services {
+      padding: 4rem 0;
+      background-color: var(--gris-claro);
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+      font-size: 2rem;
+      color: var(--azul-profundo);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      background-color: var(--blanco);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: var(--sombra);
+      text-align: center;
+    }
+
+    .service-card h3 {
+      color: var(--verde-esmeralda);
+      margin-bottom: 0.5rem;
+    }
+
+    .price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: var(--azul-profundo);
+      margin: 1rem 0;
+    }
+
+    /* Sección Sobre Mí */
+    .about {
+      padding: 4rem 0;
+    }
+
+    .about-content {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .about-text {
+      flex: 1;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--azul-profundo);
+      color: var(--blanco);
+      text-align: center;
+      padding: 2rem 0;
+      margin-top: 2rem;
+    }
+
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      box-shadow: var(--sombra);
+      transition: transform 0.3s;
+      z-index: 1000;
+    }
+
+    .whatsapp-btn:hover {
+      transform: scale(1.1);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        margin-top: 1rem;
+      }
+      .nav-links li {
+        margin-left: 1rem;
+      }
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .about-content {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Profe Contable <span>El Peñol</span></div>
+        <ul class="nav-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#sobre-mi">Sobre Mí</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Sección Hero -->
+    <section id="inicio" class="hero">
+      <div class="container">
+        <h1>Profe Contable El Peñol</h1>
+        <p>Asesoría contable y financiera para restaurantes, hoteles y pequeños negocios en El Peñol y Guatapé.</p>
+        <a href="https://wa.me/573000000000?text=Hola,%20quiero%20agendar%20una%20asesoría%20gratuita" class="btn">Agenda tu Asesoría Gratuita</a>
+      </div>
+    </section>
+
+    <!-- Sección de Servicios -->
+    <section id="servicios" class="services">
+      <div class="container">
+        <h2 class="section-title">Servicios Contables</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>Asesoría Mensual</h3>
+            <div class="price">$220.000 / mes</div>
+            <p>Clasificación de ingresos/gastos, declaraciones ICA y reporte de rentabilidad.</p>
+          </div>
+          <div class="service-card">
+            <h3>Declaración de Renta</h3>
+            <div class="price">$380.000 (único pago)</div>
+            <p>Para personas naturales con negocio. Cálculo, ajustes y presentación ante la DIAN.</p>
+          </div>
+          <div class="service-card">
+            <h3>Ganancia Ocasional</h3>
+            <div class="price">$280.000</div>
+            <p>Venta de lotes o propiedades. Ajuste por inflación y cálculo de impuesto del 15%.</p>
+          </div>
+          <div class="service-card">
+            <h3>Curso "Contabilidad sin miedo"</h3>
+            <div class="price">$90.000</div>
+            <p>Curso de 4 horas para empresarios. Aprende flujo de caja e impuestos básicos.</p>
+          </div>
+          <div class="service-card">
+            <h3>Consulta Puntual</h3>
+            <div class="price">$70.000 / hora</div>
+            <p>Resuelve dudas contables específicas o revisa una declaración atrasada.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Sobre Mí -->
+    <section id="sobre-mi" class="about">
+      <div class="container">
+        <h2 class="section-title">Sobre Mí</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <h3>Profesor y Contador Público</h3>
+            <p>Soy docente de la vereda Palmira y contador con experiencia. Ayudo a los dueños de negocio de El Peñol a entender sus números, pagar menos impuestos y crecer con tranquilidad.</p>
+            <br>
+            <p><strong>¡Escríbeme y agenda una asesoría gratuita de 15 minutos sin compromiso!</strong></p>
+            <a href="https://wa.me/573000000000?text=Hola,%20quiero%20agendar%20una%20asesoría%20gratuita" class="btn">Contactar ahora</a>
+          </div>
+          <div class="about-image">
+            <!-- Aquí puedes poner una foto tuya -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contacto">
+    <div class="container">
+      <p>&copy; 2026 Profe Contable El Peñol. Todos los derechos reservados.</p>
+      <p>El Peñol, Antioquia | profecontableelpenol@gmail.com</p>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a href="https://wa.me/573000000000?text=Hola,%20quiero%20agendar%20una%20asesoría%20gratuita" class="whatsapp-btn" target="_blank">💬</a>
+</body>
+</html>
